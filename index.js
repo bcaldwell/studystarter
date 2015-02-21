@@ -38,14 +38,15 @@ var server = http.createServer(app);
 app.get('/', stormpath.loginRequired, function (req, res) {
     //    console.log('Your email address is:', req.user.email);
 
-    res.send('If you can see this page, you must be logged into your account!');
+    res.send('Hello, World!');
 });
 
 app.use(function (req,res) { //1
     res.render('404', {url:req.url}); //2
 });
 
-//app.listen(3145);
-server.listen(12466, function () {
+server.listen(8888, function () {
     var serverAddr = server.address().address == '0.0.0.0' ? 'localhost' : server.address().address;
+    console.log('Express started.\n\nPlease visit http://%s:%s', serverAddr, server.address().port);
+
 });
