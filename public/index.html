@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="studystarter">
 
+<html ng-app="scotchstudy">
 <head>
     <title>Study Starter</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="StudyStarter">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+	<title>Node/Angular study App</title>
     <link rel="stylesheet" href="css/bstandard.css" type="text/css">
     <script src="http://code.jquery.com/jquery.min.js"></script>
+		#study-list 				{ margin-bottom:30px; }
+		#study-form 	 			{ margin-bottom:50px; }
 
     <!--    bootstrap-->
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
     <!--    angular-->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+	<script src="js/services/studies.js"></script> <!-- load our study service -->
     <script src="js/controllers/main.js"></script>
     <!-- load up our controller -->
     <script src="js/services/todos.js"></script>
@@ -27,10 +30,14 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.1/angular-filter.js"></script>
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
 </head>
+		<!-- HEADER AND study COUNT -->
+			<h1>I'm a study-aholic <span class="label label-info">{{ studies.length }}</span></h1>
+		<!-- study LIST -->
+		<div id="study-list" class="row">
 
 <body>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+				<!-- LOOP OVER THE studies IN $scope.studies -->
+				<div class="checkbox" ng-repeat="study in studies">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
