@@ -1,0 +1,50 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: #D1E0E0;
+}
+
+body nav.navbar-custom {
+  background-color: black;
+  border: 1px solid black;
+  height: 70px;
+}
+
+body nav.navbar-custom div.container div.name-text {
+	color: orange;
+	font-size: 30px;
+	margin-top: 8px;
+	padding: 5px;
+}
+
+body nav.navbar-custom div.container a {
+	color: green;
+	font-size: 20px;
+	margin-top: 20px;
+	padding: 5px;
+	height: 30px;
+}
+
+body nav.navbar-custom div.container a:hover {
+	color: white;
+	background-color: black;
+}
+
+footer.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #222;
+}
+
+footer.footer p.footer-text {
+	margin-top: 10px;
+	color: gray;
+}
