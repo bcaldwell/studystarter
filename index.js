@@ -38,7 +38,7 @@ var server = http.createServer(app);
 app.get('/', stormpath.loginRequired, function (req, res) {
     //    console.log('Your email address is:', req.user.email);
 
-    res.send('If you can see this page, you must be logged into your account!');
+    res.send('Hello, World!');
 });
 
 
