@@ -41,6 +41,9 @@ app.get('/', stormpath.loginRequired, function (req, res) {
     res.send('If you can see this page, you must be logged into your account!');
 });
 
+app.use(function (req,res) { //1
+    res.render('404', {url:req.url}); //2
+});
 
 //app.listen(3145);
 server.listen(12466, function () {
