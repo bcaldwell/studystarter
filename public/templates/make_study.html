@@ -3,25 +3,26 @@
     <h2 style="margin:5px">Enter Information for New Study:</h2>
 
     <form role="form" style="display:inline-block; max-width: 700px; width: 100%; text-align: left;">
+        
         <h2 style="margin:5px">Basic Information:</h2>
 
         <div class="form-group">
-            <label for="email">Study Name:</label>
-            <input class="form-control">
+            <label for="StudyName">Study Name:</label>
+            <input ng-model="form.studyname" class="form-control"               id="StudyName">
         </div>
         <div class="form-group">
-            <label for="pwd">Summary Description:</label>
-            <input class="form-control">
+            <label for="Summary">Summary Description:</label>
+            <input ng-model="form.summary" class="form-control"                 id="Summary">
         </div>
         <div class="form-group">
-            <label for="pwd">Full Description:</label>
-            <input class="form-control">
+            <label for="Full">Full Description:</label>
+            <input ng-model="form.full" class="form-control"                   id="Full">
         </div>
 
         <h2 style="margin:5px">Eligibility:</h2>
 
         <div class="form-group">
-            <label for="pwd">Sex:</label>
+            <label for="Sex">Sex:</label>
             <div class="btn-group" style="text-align: center; width: 100%;">
                 <label class="btn btn-default" ng-model="a" ng-model="radioModel" btn-radio="'Male'">Male</label>
                 <label class="btn btn-default" ng-model="a" ng-model="radioModel" btn-radio="'Female'">Female</label>
@@ -30,15 +31,68 @@
         </div>
 
         <div class="form-group">
-            <label for="pwd">Age:</label>
+            <label for="Age">Age:</label>
             <div class="btn-group" style="text-align: center; width: 100%;">
-                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'Male'">0-18</label>
-                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'Female'">19-64</label>
-                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'Other'">65+</label>
+                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'0-18'">0-18</label>
+                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'19-64'">19-64</label>
+                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'65+'">65+</label>
             </div>
         </div>
+    
+        <div class="form-group">
+            <label for="OtherRequirements">Other Requirements:                 </label>
+            <input ng-model="form.otherrequirements" class="form-               control" id="OtherRequirements">
+        </div>
+        
+        <h2 style="margin:5px">Study Details:</h2>
+        
+        <div class="form-group">
+            <label for="StartDate">Start Date:</label>
+            <input type=date step=7 min=2015-02-22 ng-                          model="form.startdate" class="form-control"                        id="Start Date">
+        </div>
+        
+        <div class="form-group">
+            <label for="EndDate">End Date:</label>
+            <input type=date step=7 min=2015-02-22 ng-                          model="form.enddate" class="form-control"                        id="End Date">
+        </div>
+        
+        <div class="form-group">
+            <label for="StudyLength">Approximate Participant Study              Length:</label>
+            <input ng-model="form.studylength" class="form-                     control" id="StudyLength"> 
+            <select>
+                <option value="minutes">Minutes</option>
+                <option value="hours">Hours</option>
+                <option value="days">Days</option>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
+                <option value="years">Years</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="Town_City">Town/City:                                     </label>
+            <input ng-model="form.towncity" class="form-                        control" id="Town_City">
+        </div>
+        
+        <div class="form-group">
+            <label for="Compensation">Compensation:                              </label>
+            <input ng-model="form.compensation" class="form-                    control" id="compensation">
+        </div>
 
-        <button type="submit" class="btn btn-default">Submit</button>
+        <h2 style="margin:5px">Contact Information:</h2>
+
+        <div class="form-group">
+            <label for="Phone Number">Phone Number:                             </label>
+            <input ng-model="phonenumber" class="form-                         control" id="Phone Number">
+        </div>
+        
+        <div class="form-group">
+            <label for="Email">Email:                                           </label>
+            <input ng-model="form.email" class="form-                           control" id="email">
+        </div>
+        
+        <button type="submit" class="btn btn-                               default">Submit</button>
+        
     </form>
 </div>
 
