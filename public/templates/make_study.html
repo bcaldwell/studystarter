@@ -2,8 +2,8 @@
 
     <h2 style="margin:5px">Enter Information for New Study:</h2>
 
-    <form role="form" style="display:inline-block; max-width: 700px; width: 100%; text-align: left;">
-        
+    <form ng-submit="submit()" role="form" style="display:inline-block; max-width: 700px; width: 100%; text-align: left;">
+
         <h2 style="margin:5px">Basic Information:</h2>
 
         <div class="form-group">
@@ -24,37 +24,37 @@
         <div class="form-group">
             <label for="Sex">Sex:</label>
             <div class="btn-group" style="text-align: center; width: 100%;">
-                <label class="btn btn-default" ng-model="a" ng-model="radioModel" btn-radio="'Male'">Male</label>
-                <label class="btn btn-default" ng-model="a" ng-model="radioModel" btn-radio="'Female'">Female</label>
-                <label class="btn btn-default" ng-model="a" ng-model="radioModel" btn-radio="'Other'">Other</label>
+                <label class="btn btn-default" ng-model="form.sex" ng-model="radioModel" btn-radio="'Male'">Male</label>
+                <label class="btn btn-default" ng-model="form.sex" ng-model="radioModel" btn-radio="'Female'">Female</label>
+                <label class="btn btn-default" ng-model="form.sex" ng-model="radioModel" btn-radio="'Other'">Other</label>
             </div>
         </div>
 
         <div class="form-group">
             <label for="Age">Age:</label>
             <div class="btn-group" style="text-align: center; width: 100%;">
-                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'0-18'">0-18</label>
-                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'19-64'">19-64</label>
-                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'65+'">65+</label>
+                <label class="btn btn-default" ng-model="form.age" ng-model="radioModel" btn-radio="'0-18'">0-18</label>
+                <label class="btn btn-default" ng-model="form.age" ng-model="radioModel" btn-radio="'19-64'">19-64</label>
+                <label class="btn btn-default" ng-model="form.age" ng-model="radioModel" btn-radio="'65+'">65+</label>
             </div>
         </div>
-    
+
         <div class="form-group">
             <label for="OtherRequirements">Other Requirements:</label>
             <input ng-model="form.otherrequirements" class="form-control" id="OtherRequirements">
         </div>
-        
+
         <h2 style="margin:5px">Study Details:</h2>
-        
+
         <div class="form-group">
             <label for="StartDate">Start Date:</label>
             <input type=date step=7 min=2015-02-22 ng-model="form.startdate" class="form-control" id="Start Date">
         </div>
-        
+
         <div class="form-group">
             <label for="EndDate">End Date:</label>
             <input type=date step=7 min=2015-02-22 ng-model="form.enddate" class="form-control" id="End Date">
-      
+
             <label for="Units"></label>
             <div class="btn-group" style="text-align: center; width: 100%;">
                 <label class="btn btn-default" ng-model="c" ng-model="radioModel" btn-radio="'Minutes'">Minutes</label>
@@ -65,12 +65,12 @@
                 <label class="btn btn-default" ng-model="c" ng-model="radioModel" btn-radio="'Years'">Years</label>
             </div>
         </div>
-        
+
         <div class="form-group">
             <label for="Town_City">Town/City: </label>
             <input ng-model="form.towncity" class="form-control" id="Town_City">
         </div>
-        
+
         <div class="form-group">
             <label for="Compensation">Compensation:</label>
             <input ng-model="form.compensation" class="form-control" id="compensation">
@@ -82,13 +82,13 @@
             <label for="Phone Number">Phone Number:</label>
             <input ng-model="phonenumber" class="form-control" id="Phone Number">
         </div>
-        
+
         <div class="form-group">
             <label for="Email">Email:</label>
-            <input ng-model="form.email" class="form-control" id="email">
+            <input type=email ng-model="form.email" class="form-control" id="email">
         </div>
-        
+
         <button type="submit" class="btn btn-default">Submit</button>
-        
+
     </form>
 </div>

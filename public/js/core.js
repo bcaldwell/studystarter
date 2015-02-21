@@ -1,9 +1,20 @@
 (function () {
     var app = angular.module('studystarter', ['todoController', 'todoService', 'angular.filter', 'ui.bootstrap', 'ui.router']);
 
-    app.controller('mainController', function () {
-        this.hello = "boo";
-    })
+    app.controller('makeStudy', ['$scope', '$http', 'Todos', function ($scope, $http, Todos) {
+        $scope.submit = function () {
+            console.log($scope.form);
+            Todos.create($scope.form)
+                // if successful creation, call our get function to get all the new todos
+                // clear the form so our user is ready to enter another
+
+            .success(function (data) {
+                console.log("send");
+                $scope.form = {}; // clear the form so our user is ready to enter another
+            });
+            $scope.form = {};
+        };
+    }]);
 
     app.config([
 '$stateProvider',
@@ -20,12 +31,14 @@ function ($stateProvider, $urlRouterProvider) {
                 .state('studies', {
                     url: '/studies',
                     templateUrl: 'templates/studies.html',
+
                 });
 
             $stateProvider
                 .state('make_study', {
                     url: '/make_study',
                     templateUrl: 'templates/make_study.html',
+                    controller: 'makeStudy'
                 });
 
             $stateProvider
