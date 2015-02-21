@@ -1,0 +1,11 @@
+{
+    "name": "studyStarter",
+    "version": "0.0.1",
+    "description": "studyStarter",
+    "dependencies": {
+        "express": "^4.11.2",
+        "express-stormpath": "^0.6.3",
+        "mime": "~1.2.7",
+        "socket.io": "~0.9.6"
+    }
+}
