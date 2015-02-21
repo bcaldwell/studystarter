@@ -1,7 +1,7 @@
-var Todo = require('./models/todo');
+var studiesDb = require('./models/studies');
 
 function getTodos(res){
-	Todo.find(function(err, todos) {
+	studiesDb.find(function(err, todos) {
 
 			// if there is an error retrieving, send the error. nothing after res.send(err) will execute
 			if (err)
@@ -24,13 +24,27 @@ module.exports = function(app) {
 	// create todo and send back all todos after creation
 	app.post('/api/todos', function(req, res) {
         
-        console.log(req.body.text);
+        //console.log(req.body.text);
+        //console.log(req.body);
+        
+        var data = req.body;
+        
 
 		// create a todo, information comes from AJAX request from Angular
-		Todo.create({
-        
-			text : req.body.text,
-            description: "One small step",
+		studiesDb.create({
+			text : data.text || "Not Provided",
+            studyName:data.studyName || "Not Provided",
+            gender:data.gender || "Not Provided",
+            longDescription:data.longDescription || "Not Provided",
+            shortDescription:data.shortDescription || "Not Provided",
+            statDate:data.startDate || "Not Provided",
+            endDate:data.endDate || "Not Provided",
+            studyLength:data.studyLength || 'Not Provided',
+            compensation:data.compensation || 'Not Provided',
+            phone:data.phone || 'Not Provided',
+            email:data.email || 'Not Provided',
+            
+            //description: "One small step",
 			done : false
 		}, function(err, todo) {
 			if (err)
@@ -44,7 +58,7 @@ module.exports = function(app) {
 
 	// delete a todo
 	app.delete('/api/todos/:todo_id', function(req, res) {
-		Todo.remove({
+		studiesDb.remove({
 			_id : req.params.todo_id
 		}, function(err, todo) {
 			if (err)
