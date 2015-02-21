@@ -42,7 +42,8 @@ app.get('/', stormpath.loginRequired, function (req, res) {
 });
 
 
-//app.listen(3145);
-server.listen(12466, function () {
+server.listen(8888, function () {
     var serverAddr = server.address().address == '0.0.0.0' ? 'localhost' : server.address().address;
+    console.log('Express started.\n\nPlease visit http://%s:%s', serverAddr, server.address().port);
+
 });
