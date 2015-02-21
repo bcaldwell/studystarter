@@ -28,6 +28,15 @@ function ($stateProvider, $urlRouterProvider) {
                     templateUrl: 'templates/contact.html',
                 });
 
+            $stateProvider
+                .state('study', {
+                    url: "/study/{studyId}",
+                    templateUrl: 'templates/study.html',
+                    controller: function ($scope, $stateParams) {
+                        $scope.test = $stateParams.studyId;
+                    }
+                })
+
             $urlRouterProvider.otherwise('home');
 }]);
 })();
