@@ -8,15 +8,15 @@
 
         <div class="form-group">
             <label for="StudyName">Study Name:</label>
-            <input ng-model="form.studyname" class="form-control"               id="StudyName">
+            <input ng-model="form.studyname" class="form-control" id="StudyName">
         </div>
         <div class="form-group">
             <label for="Summary">Summary Description:</label>
-            <input ng-model="form.summary" class="form-control"                 id="Summary">
+            <input ng-model="form.summary" class="form-control" id="Summary">
         </div>
         <div class="form-group">
             <label for="Full">Full Description:</label>
-            <input ng-model="form.full" class="form-control"                   id="Full">
+            <input ng-model="form.full" class="form-control" id="Full">
         </div>
 
         <h2 style="margin:5px">Eligibility:</h2>
@@ -40,167 +40,55 @@
         </div>
     
         <div class="form-group">
-            <label for="OtherRequirements">Other Requirements:                 </label>
-            <input ng-model="form.otherrequirements" class="form-               control" id="OtherRequirements">
+            <label for="OtherRequirements">Other Requirements:</label>
+            <input ng-model="form.otherrequirements" class="form-control" id="OtherRequirements">
         </div>
         
         <h2 style="margin:5px">Study Details:</h2>
         
         <div class="form-group">
             <label for="StartDate">Start Date:</label>
-            <input type=date step=7 min=2015-02-22 ng-                          model="form.startdate" class="form-control"                        id="Start Date">
+            <input type=date step=7 min=2015-02-22 ng-model="form.startdate" class="form-control" id="Start Date">
         </div>
         
         <div class="form-group">
             <label for="EndDate">End Date:</label>
-            <input type=date step=7 min=2015-02-22 ng-                          model="form.enddate" class="form-control"                        id="End Date">
+            <input type=date step=7 min=2015-02-22 ng-model="form.enddate" class="form-control" id="End Date">
+      
+            <label for="Units"></label>
+            <div class="btn-group" style="text-align: center; width: 100%;">
+                <label class="btn btn-default" ng-model="c" ng-model="radioModel" btn-radio="'Minutes'">Minutes</label>
+                <label class="btn btn-default" ng-model="c" ng-model="radioModel" btn-radio="'Hours'">Hours</label>
+                <label class="btn btn-default" ng-model="c" ng-model="radioModel" btn-radio="'Days'">Days</label>
+                <label class="btn btn-default" ng-model="c" ng-model="radioModel" btn-radio="'Weeks'">Weeks</label>
+                <label class="btn btn-default" ng-model="c" ng-model="radioModel" btn-radio="'Months'">Months</label>
+                <label class="btn btn-default" ng-model="c" ng-model="radioModel" btn-radio="'Years'">Years</label>
+            </div>
         </div>
         
         <div class="form-group">
-            <label for="StudyLength">Approximate Participant Study              Length:</label>
-            <input ng-model="form.studylength" class="form-                     control" id="StudyLength"> 
-            <select>
-                <option value="minutes">Minutes</option>
-                <option value="hours">Hours</option>
-                <option value="days">Days</option>
-                <option value="weeks">Weeks</option>
-                <option value="months">Months</option>
-                <option value="years">Years</option>
-            </select>
+            <label for="Town_City">Town/City: </label>
+            <input ng-model="form.towncity" class="form-control" id="Town_City">
         </div>
         
         <div class="form-group">
-            <label for="Town_City">Town/City:                                     </label>
-            <input ng-model="form.towncity" class="form-                        control" id="Town_City">
-        </div>
-        
-        <div class="form-group">
-            <label for="Compensation">Compensation:                              </label>
-            <input ng-model="form.compensation" class="form-                    control" id="compensation">
+            <label for="Compensation">Compensation:</label>
+            <input ng-model="form.compensation" class="form-control" id="compensation">
         </div>
 
         <h2 style="margin:5px">Contact Information:</h2>
 
         <div class="form-group">
-            <label for="Phone Number">Phone Number:                             </label>
-            <input ng-model="phonenumber" class="form-                         control" id="Phone Number">
+            <label for="Phone Number">Phone Number:</label>
+            <input ng-model="phonenumber" class="form-control" id="Phone Number">
         </div>
         
         <div class="form-group">
-            <label for="Email">Email:                                           </label>
-            <input ng-model="form.email" class="form-                           control" id="email">
+            <label for="Email">Email:</label>
+            <input ng-model="form.email" class="form-control" id="email">
         </div>
         
-        <button type="submit" class="btn btn-                               default">Submit</button>
+        <button type="submit" class="btn btn-default">Submit</button>
         
     </form>
 </div>
-
-<form>
-    Study name:
-    <br>
-    <input type="text" name="StudyName">
-    <br>
-    <br> Summary Description:
-    <br>
-    <input type="text" name="SummaryDescription">
-    <br>
-    <br> Full Description:
-    <br>
-    <input type="text" name="FullDescription">
-    <br>
-    <br>
-
-    <h2>Eligibility:</h2>
-
-    <br>
-    <br> Sex:
-
-    <br>
-    <input type="radio" name="Sex" value="Male" checked> Male
-    <br>
-    <input type="radio" name="Sex" value="Female" checked> Female
-    <br>
-    <input type="radio" name="Sex" value="All" checked> All
-    <br>
-    <input type="radio" name="Sex" value="Not                           Applicable" checked> Not Applicable
-    <br>
-    <br> Age Range:
-    <br>
-    <input type="radio" name="Age" value="0-18" checked> 0-18
-    <br>
-    <input type="radio" name="Age" value="19-45" checked> 19-64
-    <br>
-    <input type="radio" name="Age" value="65+" checked> 65+
-    <br>
-    <input type="radio" name="Age" value="Custom"> Other
-    <input type="text" name="Age">
-    <br>
-    <br> Other Requirements:
-    <br>
-    <input type="text" name="other">
-    <br>
-    <br>
-
-    <h2>Information About the Study:</h2>
-
-    <br>
-    <br> Start Date:
-    <br>
-    <input type="text" name="StartMonth" placeholder="Month">
-    <input type="text" name="StartDay" placeholder="Day">
-    <input type="text" name="StartYear" placeholder="Year">
-    <br>
-    <br> End Date:
-    <br>
-    <input type="text" name="EndMonth" placeholder="Month">
-    <input type="text" name="EndDay" placeholder="Day">
-    <input type="text" name="EndYear" placeholder="Year">
-    <br>
-    <br> Approximate Participant Study Length:
-    <br>
-    <input type="text" name="StudyLength">
-    <select>
-        <option value="minutes">Minutes</option>
-        <option value="hours">Hours</option>
-        <option value="days">Days</option>
-        <option value="weeks">Weeks</option>
-        <option value="months">Months</option>
-        <option value="years">Years</option>
-    </select>
-
-    <br>
-    <br> Town/City:
-
-    <br>
-    <input type="text" name="Town_City">
-    <br>
-    <br> Compensation:
-
-    <br>
-    <input type="text" name="Compensation">
-    <br>
-    <br>
-
-    <h2>Contact Information:</h2>
-
-    <br>
-    <br> Phone Number:
-    <br>
-    <input type="text" name="PhoneNumber">
-    <br>
-    <br> Email:
-
-    <br>
-    <input type="text" name="Email">
-    <br>
-    <br>
-
-    <input type="submit" value="Submit">
-    <br>
-    <br>
-
-    <br>
-    <br>
-
-</form>
