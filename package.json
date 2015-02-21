@@ -1,11 +1,14 @@
 {
-    "name": "studyStarter",
-    "version": "0.0.1",
-    "description": "studyStarter",
-    "dependencies": {
-        "express": "^4.11.2",
-        "express-stormpath": "^0.6.3",
-        "mime": "~1.2.7",
-        "socket.io": "~0.9.6"
-    }
+  "name"         : "node-todo",
+  "version"      : "0.0.0",
+  "description"  : "Simple todo application.",
+  "main"         : "server.js",
+  "author"       : "Scotch",
+  "dependencies" : {
+    "express"         : "~4.6.1",
+    "mongoose"        : "~3.8.13",
+    "morgan"          : "~1.1.1",
+    "body-parser"     : "~1.4.3",
+    "method-override" : "~2.1.1"
+  }
 }
