@@ -96,6 +96,14 @@ form h2 {
     font-weight: bold;
 }
 
+h3.contact-message {
+	color: black;
+}
+
+h3.contact-message a {
+	color: orange;
+}
+
 footer.footer {
     position: fixed;
     bottom: 0;
