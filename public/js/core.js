@@ -22,12 +22,6 @@ function ($stateProvider, $urlRouterProvider) {
                     templateUrl: 'templates/studies.html',
                 });
 
-            $stateProvider
-                .state('contact', {
-                    url: '/contact',
-                    templateUrl: 'templates/contact.html',
-                });
-
             $urlRouterProvider.otherwise('home');
 }]);
 })();
