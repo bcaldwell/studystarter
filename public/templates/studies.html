@@ -1,4 +1,47 @@
-<h1 class="main-title">Studies</h1>
+<div style="text-align: center;">
+
+    <h2 style="margin:5px">Enter Information for New Study:</h2>
+
+    <form role="form" style="display:inline-block; max-width: 700px; width: 100%; text-align: left;">
+        <h2 style="margin:5px">Basic Information:</h2>
+
+        <div class="form-group">
+            <label for="email">Study Name:</label>
+            <input class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Summary Description:</label>
+            <input class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Full Description:</label>
+            <input class="form-control">
+        </div>
+
+        <h2 style="margin:5px">Eligibility:</h2>
+
+        <div class="form-group">
+            <label for="pwd">Sex:</label>
+            <div class="btn-group" style="text-align: center; width: 100%;">
+                <label class="btn btn-default" ng-model="a" ng-model="radioModel" btn-radio="'Male'">Male</label>
+                <label class="btn btn-default" ng-model="a" ng-model="radioModel" btn-radio="'Female'">Female</label>
+                <label class="btn btn-default" ng-model="a" ng-model="radioModel" btn-radio="'Other'">Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="pwd">Age:</label>
+            <div class="btn-group" style="text-align: center; width: 100%;">
+                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'Male'">0-18</label>
+                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'Female'">19-64</label>
+                <label class="btn btn-default" ng-model="b" ng-model="radioModel" btn-radio="'Other'">65+</label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+
 <form>
     Study name:
     <br>
@@ -13,7 +56,7 @@
     <input type="text" name="FullDescription">
     <br>
     <br>
-    
+
     <h2>Eligibility:</h2>
 
     <br>
@@ -44,9 +87,9 @@
     <input type="text" name="other">
     <br>
     <br>
-    
+
     <h2>Information About the Study:</h2>
-    
+
     <br>
     <br> Start Date:
     <br>
@@ -71,7 +114,7 @@
         <option value="months">Months</option>
         <option value="years">Years</option>
     </select>
-    
+
     <br>
     <br> Town/City:
 
@@ -84,9 +127,9 @@
     <input type="text" name="Compensation">
     <br>
     <br>
-    
+
     <h2>Contact Information:</h2>
-    
+
     <br>
     <br> Phone Number:
     <br>

@@ -1,109 +1,111 @@
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 html body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  margin-top: 90px;
-  background-color: #428bca;
+    /* Margin bottom by footer height */
+    
+    margin-bottom: 60px;
+    margin-top: 90px;
+    background-color: #428bca;
 }
 
 body nav.navbar-custom {
-  background-color: black;
-  border: 1px solid black;
-  height: 70px;
+    background-color: black;
+    border: 1px solid black;
+    height: 70px;
 }
 
 body nav.navbar-custom div.container div.name-text {
-	color: orange;
-	font-size: 30px;
-	margin-top: 8px;
-	padding: 5px;
+    color: orange;
+    font-size: 30px;
+    margin-top: 8px;
+    padding: 5px;
 }
 
 body nav.navbar-custom div.container li.active {
-	border-bottom: 3px solid white;
+    border-bottom: 3px solid white;
 }
 
 body nav.navbar-custom div.container li.active a {
-	color: white;
+    color: white;
 }
 
 body nav.navbar-custom div.container a {
-	color: green;
-	font-size: 20px;
-	margin-top: 20px;
-	padding: 5px;
-	height: 30px;
+    color: green;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 5px;
+    height: 30px;
 }
 
 body nav.navbar-custom div.container a:hover {
-	color: white;
-	background-color: black;
+    color: white;
+    background-color: black;
 }
 
 h1.main-title {
-	color: purple;
-	text-decoration: underline;
-	font-size: 42px;
-	font-weight: bold;
-	text-shadow: 0px 0px 1px black;
-	margin-bottom: 30px;
+    color: purple;
+    text-decoration: underline;
+    font-size: 42px;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px black;
+    margin-bottom: 30px;
 }
 
 div.sponsored-study {
-	background-color: white;
-	border: 1px solid black;
-	border-radius: 5px;
-	box-shadow: 5px 5px 10px black;
-	margin: 5px;
-	padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+    margin: 5px;
+    padding: 10px;
 }
 
 div.sponsored-study:hover {
-	background-color: green;
-	color: white;
+    background-color: green;
+    color: white;
 }
 
 div.sponsored-study:hover h5 {
-	color: orange;
+    color: orange;
 }
 
 div.sponsored-study div.study-info {
-	border-bottom: 1px solid;
-	margin-bottom: 20px;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
 }
 
 div.sponsored-study h3 {
-	margin-top: 2px;
-	text-decoration: underline;
+    margin-top: 2px;
+    text-decoration: underline;
 }
 
 div.sponsored-study h5 {
-	color: gray;
-	margin-top: 0px;
-	font-style: italic;
-	font-weight: bold;
+    color: gray;
+    margin-top: 0px;
+    font-style: italic;
+    font-weight: bold;
 }
 
 form h2 {
-    color: navy;
-	margin-top: 0px;
-	font-weight: bold;
+    color: green;
+    margin-top: 0px;
+    font-weight: bold;
 }
 
 footer.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 40px;
-  background-color: #222;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    
+    height: 40px;
+    background-color: #222;
 }
 
 footer.footer p.footer-text {
-	margin-top: 10px;
-	color: gray;
+    margin-top: 10px;
+    color: gray;
 }
