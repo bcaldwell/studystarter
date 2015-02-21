@@ -23,6 +23,12 @@ function ($stateProvider, $urlRouterProvider) {
                 });
 
             $stateProvider
+                .state('make_study', {
+                    url: '/make_study',
+                    templateUrl: 'templates/make_study.html',
+                });
+
+            $stateProvider
                 .state('contact', {
                     url: '/contact',
                     templateUrl: 'templates/contact.html',
