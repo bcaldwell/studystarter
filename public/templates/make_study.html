@@ -83,7 +83,7 @@
         
         <div class="form-group">
             <label for="Duration">Duration: </label>
-            <input ng-model="form.duration" class="form-control" id="Duration">
+            <input type="number" min="1" ng-model="form.duration" class="form-control" id="Duration">
         
             <label for="Units"></label>
             <div class="btn-group" style="text-align: center; width: 100%;">
@@ -110,7 +110,7 @@
 
         <div class="form-group">
             <label for="phoneNumber">Phone Number:</label>
-            <input ng-model="form.phoneNumber" class="form-control" id="phoneNumber">
+            <input type="tel" ng-model="form.phoneNumber" class="form-control" id="phoneNumber">
         </div>
 
         <div class="form-group">
