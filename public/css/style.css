@@ -49,6 +49,18 @@ body nav.navbar-custom div.container a:hover {
     background-color: rgba(0, 0, 0, 0);
 }
 
+div.home-info {
+	background-color: white;
+	border-radius: 20px;
+	margin-bottom: 50px;
+}
+
+p.home-description {
+	padding: 10px;
+	font-size: 24px;
+	text-align: justify;
+}
+
 h1.main-title {
     color: green;
     font-size: 42px;
@@ -143,4 +155,9 @@ footer.footer p.footer-text {
 img.magnifier-img {
 	height: 35px;
 	width: 35px;
+}
+
+img.logo-img {
+	width: 100%;
+	border-right: 3px solid black;
 }
