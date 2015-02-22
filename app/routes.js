@@ -40,6 +40,11 @@ module.exports = function (app) {
                     }
                     else if(key == 'compensation'){
                         console.log("Compensation reached");
+                        if( docs[i][key] > value ){
+                            console.log("Adding to compensation")
+                            toReturn.push(docs[i]);
+                            
+                        }
                         // FINISH THIS LATER    
                     }
                 }
@@ -133,7 +138,6 @@ module.exports = function (app) {
         }, function (err, todo) {
             if (err)
                 res.send(err);
-
             // get and return all the todos after you create another
             getTodos(res);
         });
