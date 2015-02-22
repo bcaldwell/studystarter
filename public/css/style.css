@@ -37,6 +37,7 @@ body nav.navbar-custom div.container li.active a {
 
 body nav.navbar-custom div.container a {
     color: white;
+    background-color: rgba(0, 160, 191, 0.95);
     font-size: 20px;
     margin-top: 20px;
     padding: 5px;
