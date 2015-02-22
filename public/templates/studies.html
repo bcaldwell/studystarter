@@ -20,7 +20,7 @@
 </form>
 
 <div ng-repeat="Cstudy in study.studies|orderBy:rank|limitTo:6" class="col-md-4">
-    <a ng-href="#/study/{{study._id}}" class="study-link">
+    <a ng-href="#/study/{{Cstudy._id}}" class="study-link">
         <div class="sponsored-study">
             <div class="study-info">
                 <h3>{{Cstudy.studyName}} <span class="rank pull-right">{{Cstudy.rank}}</span></h3>
