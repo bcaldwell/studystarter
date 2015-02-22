@@ -30,7 +30,7 @@ module.exports = function (app) {
                 //console.log(err);
                //console.log(docs);
                 for (var i = 0; i < docs.length; i++){
-                    if(docs[i][key].toLowerCase == value.toLowerCase){
+                    if(docs[i][key].toLowerCase() == value.toLowerCase()){
                         //console.log('reach for loop search')
                         toReturn.push(docs[i])
                     }
