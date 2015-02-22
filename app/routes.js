@@ -21,7 +21,7 @@ module.exports = function (app) {
         if(req.query.key && req.query.value){
             console.log("Received a search query")
             var key = req.query.key;
-            var value = req.query.value
+            var value = req.query.value.trim();
             console.log(key);
             console.log(value);
             //Todo.find({key:value},function(err,docs){
@@ -30,7 +30,7 @@ module.exports = function (app) {
                 //console.log(err);
                //console.log(docs);
                 for (var i = 0; i < docs.length; i++){
-                    if(docs[i][key] == value){
+                    if(docs[i][key].toLowerCase == value.toLowerCase){
                         //console.log('reach for loop search')
                         toReturn.push(docs[i])
                     }
@@ -94,7 +94,7 @@ module.exports = function (app) {
             startDate: data.startDate || "Not Provided",
             endDate: data.endDate || "Not Provided",
             compensation: data.compensation || 'Not Provided',
-            phoneNumber: data.phoneNumber || 'Not Provided',
+            phoneNumber: data.phoneNumber || 000-000-0000,
             email: data.email || 'Not Provided',
             duration: data.duration || 'Not Provided',
             timeLength: data.time || 'Not Provided',
@@ -102,7 +102,7 @@ module.exports = function (app) {
             researcher:data.researcher || "Not Provided",
             location: data.townCity || "Not Provided",
             otherRequirements: data.otherRequirements || "Not Provided",
-            studyType: data.studyType || "Not Provided",
+            typeOfStudy: data.typeOfStudy || "Not Provided",
             areaOfInterest: data.areaOfInterest || "Not Provided",
 
             done: false
