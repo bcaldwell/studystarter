@@ -52,10 +52,10 @@ body nav.navbar-custom div.container a:hover {
 div.home-info {
 	background-color: white;
 	border-radius: 30px;
-	margin-top: 30px;
-	margin-bottom: 50px;
-	margin-left: 80px;
-	margin-right: 80px;
+	margin-top: 50px;
+	margin-bottom: 80px;
+	margin-left: 150px;
+	margin-right: 150px;
 }
 
 p.home-description {
@@ -163,6 +163,7 @@ img.magnifier-img {
 img.logo-img {
 	display: block;
 	width: 300px;
+	margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
 }
