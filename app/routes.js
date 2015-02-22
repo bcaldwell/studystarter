@@ -63,7 +63,6 @@ module.exports = function (app) {
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
 
-            text: data.text || "Not Provided",
             studyName: data.studyName || "Not Provided",
             sex: data.sex || "Not Provided",
             age: data.age || "Not Provided",
@@ -71,14 +70,17 @@ module.exports = function (app) {
             fullDescription: data.fullDescription || "Not Provided",
             statDate: data.startDate || "Not Provided",
             endDate: data.endDate || "Not Provided",
-            studyLength: data.studyLength || 'Not Provided',
             compensation: data.compensation || 'Not Provided',
-            phoneNumber: data.phone || 'Not Provided',
+            phoneNumber: data.phoneNumber || 'Not Provided',
             email: data.email || 'Not Provided',
             duration: data.duration || 'Not Provided',
             timeLength: data.time || 'Not Provided',
             rank: Math.ceil((Math.random() * 40)),
             researcher:data.researcher || "Not Provided",
+            location: data.townCity || "Not Provided",
+            otherRequirements: data.otherRequirements || "Not Provided",
+            studyType: data.studyType || "Not Provided",
+            areaOfInterest: data.areaOfInterest || "Not Provided",
 
             //text: req.body.text,
             //description: "One small step",

@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 
 module.exports = mongoose.model('Studies', {
-    text : {type : String, default: "Not Provided"},
     studyName:{type : String,  default: "Not Provided"},
     sex:{type : String,  default: "Not Provided"},
     age:{type : String,  default: "Not Provided"},
@@ -9,15 +8,16 @@ module.exports = mongoose.model('Studies', {
     fullDescription:{type : String,  default: "Not Provided"},
     startDate:{type : String,  default: "Not Provided"},
     endDate:{type : String,  default: "Not Provided"},
-    studyLength:{type : String,  default: 'Not Provided'},
     compensation:{type : String,  default: 'Not Provided'},
     phone:{type : String,  default: 'Not Provided'},
     email:{type : String,  default: 'Not Provided'},
     duration:{type : String,  default: 'Not Provided'},
     timeLength:{type : String,  default: 'Not Provided'},
-    rank:{type:Number, defaults:"Not Provided"},
-    areaOfInterest:{type:String, defaults:"Not Provided"},
-    typeOfStudy:{type:String,defaults:"Not Provided"},
-    researcher:{type:String,defaults:"Not Provided"}
+    rank:{type:Number, default:0},
+    areaOfInterest:{type:String, default:"Not Provided"},
+    studyType:{type:String,default:"Not Provided"},
+    researcher:{type:String,default:"Not Provided"},
+    location:{type:String,default:"Not Provided"},
+    otherRequirements:{type:String,default:"Not Provided"}
 
 });
