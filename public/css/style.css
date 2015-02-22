@@ -8,32 +8,35 @@ html body {
     
     margin-bottom: 60px;
     margin-top: 90px;
-    background-color: #428bca;
+    background-color: #40C7FF;
 }
 
 body nav.navbar-custom {
-    background-color: black;
-    border: 1px solid black;
+    background-color: rgba(0, 160, 191, 0.95);
+    border: 1px solid #00BABF;
     height: 70px;
 }
 
 body nav.navbar-custom div.container div.name-text {
-    color: orange;
-    font-size: 30px;
-    margin-top: 8px;
+    color: #CCB014;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0px;
     padding: 5px;
+    text-shadow: 0px 0px 1px black;
 }
 
 body nav.navbar-custom div.container li.active {
-    border-bottom: 3px solid white;
+    border-bottom: 4px solid #FFA500;
 }
 
 body nav.navbar-custom div.container li.active a {
-    color: white;
+    color: #FFA500;
+    font-weight: bold;
 }
 
 body nav.navbar-custom div.container a {
-    color: green;
+    color: white;
     font-size: 20px;
     margin-top: 20px;
     padding: 5px;
@@ -41,15 +44,14 @@ body nav.navbar-custom div.container a {
 }
 
 body nav.navbar-custom div.container a:hover {
-    color: white;
-    background-color: black;
+    color: #FFA500;
+    background-color: rgba(0, 160, 191, 0.95);
 }
 
 h1.main-title {
-    color: purple;
+    color: #998B3D;
     text-decoration: underline;
     font-size: 42px;
-    font-weight: bold;
     text-shadow: 0px 0px 1px black;
     margin-bottom: 30px;
 }
@@ -58,19 +60,24 @@ div.sponsored-study {
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 0px 0px 10px gray;
     margin: 5px;
     margin-bottom: 30px;
     padding: 10px;
 }
 
 div.sponsored-study:hover {
-    background-color: green;
+    background-color: rgba(153, 139, 61, 0.2);
     color: white;
+    box-shadow: 5px 5px 10px black;
+}
+
+div.sponsored-study:hover h3 {
+    color: green;
 }
 
 div.sponsored-study:hover h5 {
-    color: orange;
+    color: gray;
 }
 
 div.sponsored-study div.study-info {
@@ -101,7 +108,7 @@ h3.contact-message {
 }
 
 h3.contact-message a {
-	color: orange;
+	color: #E82B00;
 }
 
 footer.footer {
@@ -111,10 +118,10 @@ footer.footer {
     /* Set the fixed height of the footer here */
     
     height: 40px;
-    background-color: #222;
+    background-color: #00A0BF;
 }
 
 footer.footer p.footer-text {
     margin-top: 10px;
-    color: gray;
+    color: white;
 }
