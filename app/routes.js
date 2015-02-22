@@ -24,6 +24,9 @@ module.exports = function (app) {
                 console.log("They are asking for rank");
                 console.log(req.query.rank);
                 
+//                Todo.find({}, function(err,docs){
+//                    res.json(docs)
+//                })
                 Todo.find({}).sort({rank:-1}).limit(req.query.rank).
                 exec(function(err,docs){
 
