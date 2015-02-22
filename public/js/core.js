@@ -47,6 +47,16 @@
         page.setTitle('contact');
     }]);
 
+    app.controller('studyViewContoller', ['$stateParams', 'Page', '$http', 'Todos', function ($stateParams, page, $http, Todos) {
+        page.setTitle('study');
+        this.id = $stateParams.studyId;
+        var that = this;
+        Todos.get("rank=" + this.id)
+            .success(function (data) {
+                that.data = data;
+            });
+    }]);
+
     app.controller('navController', ['Page', function (page) {
         this.active = function (title) {
             if (title === page.title()) {
@@ -95,9 +105,8 @@ function ($stateProvider, $urlRouterProvider) {
                 .state('study', {
                     url: "/study/{studyId}",
                     templateUrl: 'templates/study.html',
-                    controller: function ($scope, $stateParams) {
-                        $scope.test = $stateParams.studyId;
-                    }
+                    controller: 'studyViewContoller',
+                    controllerAs: 'study'
                 })
 
             $urlRouterProvider.otherwise('home');
