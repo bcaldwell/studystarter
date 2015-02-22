@@ -1,34 +1,12 @@
 <h1 class="main-title">Popular Studies</h1>
-<div class="col-md-4">
+
+<div ng-repeat="study in home.studies" class="col-md-4">
     <a href="#/study/1" class="study-link">
         <div class="sponsored-study">
             <div class="study-info">
-                <h3>Title</h3>
-                <h5>Credentials, U of W</h5>
+                <h3>{{study.studyName}}</h3>
             </div>
-            <p>This is the actual info about the study. It can go on and on and on for quite a while, and I hope there are no issues. Side-effects may include an award for an awesome website and creativity.</p>
-        </div>
-    </a>
-</div>
-<div class="col-md-4">
-    <a href="#/study/1" class="study-link">
-        <div class="sponsored-study">
-            <div class="study-info">
-                <h3>Title</h3>
-                <h5>Credentials, U of W</h5>
-            </div>
-            <p>This is the actual info about the study. It can go on and on and on for quite a while, and I hope there are no issues. Side-effects may include an award for an awesome website and creativity.</p>
-        </div>
-    </a>
-</div>
-<div class="col-md-4">
-    <a href="#/study/1" class="study-link">
-        <div class="sponsored-study">
-            <div class="study-info">
-                <h3>Title</h3>
-                <h5>Credentials, U of W</h5>
-            </div>
-            <p>This is the actual info about the study. It can go on and on and on for quite a while, and I hope there are no issues. Side-effects may include an award for an awesome website and creativity.</p>
+            <p>{{study.summaryDescription}}</p>
         </div>
     </a>
 </div>

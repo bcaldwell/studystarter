@@ -22,7 +22,7 @@
                 // if successful creation, call our get function to get all the new todos
                 // clear the form so our user is ready to enter another
 
-//            .success(function (data) {
+            //            .success(function (data) {
             //                console.log("send");
             //                $scope.form = {}; // clear the form so our user is ready to enter another
             //            });
@@ -32,10 +32,11 @@
 
     app.controller('homeContoller', ['$http', 'Todos', 'Page', function ($http, Todos, page) {
         page.setTitle('home');
+        var that = this;
         Todos.get("rank=6")
-                    .success(function (data) {
-                       console.log(data);
-                     });
+            .success(function (data) {
+                that.studies = data;
+            });
     }]);
 
     app.controller('studyContoller', ['Page', function (page) {
@@ -65,7 +66,8 @@ function ($stateProvider, $urlRouterProvider) {
                 .state('home', {
                     url: '/home',
                     templateUrl: 'templates/home.html',
-                    controller: 'homeContoller'
+                    controller: 'homeContoller',
+                    controllerAs: 'home'
                 });
 
             $stateProvider
