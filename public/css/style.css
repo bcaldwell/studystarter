@@ -55,7 +55,30 @@ h1.main-title {
     margin-bottom: 30px;
 }
 
-div.sponsored-study {
+div a.study-link {
+	text-decoration: none;
+}
+
+div a.study-link div.sponsored-study:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    box-shadow: 5px 5px 10px black;
+    text-decoration: none;
+}
+
+div a.study-link div.sponsored-study:hover h3 {
+    color: green;
+}
+
+div a.study-link div.sponsored-study:hover h5 {
+    color: #0386BF;
+}
+
+div a.study-link div.sponsored-study:hover p {
+	color: white;
+}
+
+div a.study-link div.sponsored-study {
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
@@ -63,37 +86,29 @@ div.sponsored-study {
     margin: 5px;
     margin-bottom: 30px;
     padding: 10px;
+    text-decoration: none;
 }
 
-div.sponsored-study:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    box-shadow: 5px 5px 10px black;
-}
-
-div.sponsored-study:hover h3 {
-    color: green;
-}
-
-div.sponsored-study:hover h5 {
-    color: #0386BF;
-}
-
-div.sponsored-study div.study-info {
+div a.study-link div.sponsored-study div.study-info {
     border-bottom: 1px solid;
     margin-bottom: 20px;
 }
 
-div.sponsored-study h3 {
+div a.study-link div.sponsored-study h3 {
+    color: black;
     margin-top: 2px;
     text-decoration: underline;
 }
 
-div.sponsored-study h5 {
+div a.study-link div.sponsored-study h5 {
     color: gray;
     margin-top: 0px;
     font-style: italic;
     font-weight: bold;
+}
+
+div a.study-link div.sponsored-study p {
+	color: black;
 }
 
 form h2 {
