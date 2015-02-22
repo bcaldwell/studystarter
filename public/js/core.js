@@ -48,12 +48,13 @@
     }]);
 
     app.controller('studyViewContoller', ['$stateParams', 'Page', '$http', 'Todos', function ($stateParams, page, $http, Todos) {
-        page.setTitle('study');
+        page.setTitle('NaN');
         this.id = $stateParams.studyId;
         var that = this;
         Todos.get("_id=" + this.id)
             .success(function (data) {
-                that.data = data;
+                that.data = data[0];
+                console.log(that.data);
             });
     }]);
 
