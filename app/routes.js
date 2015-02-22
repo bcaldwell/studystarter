@@ -46,6 +46,7 @@ module.exports = function (app) {
             email:data.email || 'Not Provided',
             duration:data.duration || 'Not Provided',
             timeLength:data.time || 'Not Provided',
+            rank: Math.ceil((Math.random()*10)),
 
             //text: req.body.text,
             //description: "One small step",
