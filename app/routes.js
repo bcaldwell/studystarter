@@ -19,6 +19,17 @@ module.exports = function (app) {
         console.log("get");
         
         if(req.query){
+            
+            if(req.query._id){
+                
+                console.log("asking for id")
+            Todo.find({_id:req.query._id},function(err,docs){
+
+                    res.json(docs)
+                });
+                
+            
+            }
                  
             if (req.query.rank){
                 console.log("They are asking for rank");
