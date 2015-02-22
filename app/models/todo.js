@@ -13,4 +13,8 @@ module.exports = mongoose.model('Studies', {
     compensation:{type : String,  default: 'Not Provided'},
     phone:{type : String,  default: 'Not Provided'},
     email:{type : String,  default: 'Not Provided'},
+    duration:{type : String,  default: 'Not Provided'},
+    timeLength:{type : String,  default: 'Not Provided'}
+
+
 });

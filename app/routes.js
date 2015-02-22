@@ -44,6 +44,8 @@ module.exports = function (app) {
             compensation:data.compensation || 'Not Provided',
             phone:data.phone || 'Not Provided',
             email:data.email || 'Not Provided',
+            duration:data.duration || 'Not Provided',
+            timeLength:data.time || 'Not Provided',
 
             //text: req.body.text,
             //description: "One small step",
