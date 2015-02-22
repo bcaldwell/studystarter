@@ -1,6 +1,6 @@
 <img src="images/Logo.png" class="logo-img">
 <div class="home-info">
-    <p class="home-description">StudyStarter is a website designed from the bottom-up to be the best way for researchers conducting studies and possible participants to connect. StudyStarter allows researchers to easily advertise their studies and get participants, while also providing regular people wanting to join studies an easy place to find and enroll in them.</p>
+    <p class="home-description">StudyStarter is a website designed from the bottom-up to be the best way for researchers conducting studies to connect with possible participants. StudyStarter allows researchers to easily advertise their studies and get participants, while also providing regular people wanting to join studies an easy place to find and enroll in them. Let StudyStarter take care of the "search" in your research.</p>
 </div>
 
 <h1 class="main-title">Popular Studies</h1>
@@ -9,10 +9,10 @@
     <a ng-href="#/study/{{study._id}}" class="study-link">
         <div class="sponsored-study">
             <div class="study-info">
-                <h3>{{study.studyName}}</h3>
+                <h3>{{study.studyName}} <span class="rank pull-right">{{study.rank}}</span></h3>
+                <h5>{{study.researcher}}</h5>
             </div>
             <p>{{study.summaryDescription}}</p>
-            {{study.rank}}
         </div>
     </a>
 </div>

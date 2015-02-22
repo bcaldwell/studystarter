@@ -51,6 +51,7 @@ body nav.navbar-custom div.container a:hover {
 
 div.home-info {
 	background-color: white;
+    border: 3px solid gray;
 	border-radius: 30px;
 	margin-top: 50px;
 	margin-bottom: 80px;
@@ -105,8 +106,12 @@ div a.study-link div.sponsored-study {
 }
 
 div a.study-link div.sponsored-study div.study-info {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid black;
     margin-bottom: 20px;
+}
+
+div a.study-link div.sponsored-study div.study-info span.rank {
+    color: #FFA500;
 }
 
 div a.study-link div.sponsored-study h3 {
@@ -138,6 +143,36 @@ h3.contact-message {
 
 h3.contact-message a {
 	color: #E82B00;
+}
+
+div.study-profile {
+	background-color: white;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+div.study-profile-head {
+	border-bottom: 2px solid black;
+	margin-bottom: 10px;
+}
+
+div.study-profile-head h1 {
+	margin-top: 0px;
+	color: green;
+}
+
+span.filled-data {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+div.study-profile-details {
+	border-bottom: 2px solid black;
+	margin-bottom: 20px;
+}
+
+div.study-profile-details ul li {
+	font-size: 18px;
 }
 
 footer.footer {

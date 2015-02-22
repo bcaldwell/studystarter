@@ -1,12 +1,39 @@
 <div class="study-profile">
 	<div class="study-profile-head">
-		<h1 class="study-profile-title">Title</h1>
-    	<p class="pull-right">Researcher, Credentials</p>
+		<h1 class="study-profile-title">{{study.data.studyName}}</h1>
+    	<h4><i class="fa fa-user"></i> Researcher: <span class="filled-data">{{study.data.researcher}}</span></h4>
 	</div>
-	<div></div>
-	<p>Description of study</p>
-    
+	<div class="study-profile-details">
+		<div class="row">
+			<div class="col-md-4">
+				<h4><i class="fa fa-list"></i> Details:</h4>
+				<ul>
+					<li><i class="fa fa-calendar"></i> Start date: {{study.data.startDate}}</li>
+					<li><i class="fa fa-calendar"></i> End date: {{study.data.endDate}}</li>
+					<li><i class="fa fa-calendar"></i> Duration: {{study.data.duration}} {{study.data.timeLength}}</li>
+					<li><i class="fa fa-calendar"></i> Duration: {{study.data.studyLength}}</li>
+					<li><i class="fa fa-money"></i> Compensation: {{study.data.compensation}}</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h4><i class="fa fa-lock"></i> Requirements:</h4>
+				<ul>
+					<li><i class="fa fa-arrows-v"></i> Age: {{study.data.age}}</li>
+					<li><i class="fa fa-venus-mars"></i> Gender: {{study.data.sex}}</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h4><i class="fa fa-paper-plane"></i> Contact the researcher:</h4>
+				<ul>
+					<li><i class="fa fa-envelope"></i> Email: <a href="mailto:{{study.data.email}}">{{study.data.email}}</a></li>
+					<li><i class="fa fa-phone"></i> Phone: {{study.data.phone}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="study-profile-description">
+		<h4><i class="fa fa-file-text"></i> Description of study:</h4>
+		<p>{{study.data.text}}</p>
+	</div>
 </div>
-
-hello {{study.data.studyName}}
 
