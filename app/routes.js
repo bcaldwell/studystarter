@@ -73,7 +73,7 @@ module.exports = function (app) {
             endDate: data.endDate || "Not Provided",
             studyLength: data.studyLength || 'Not Provided',
             compensation: data.compensation || 'Not Provided',
-            phone: data.phone || 'Not Provided',
+            phoneNumber: data.phone || 'Not Provided',
             email: data.email || 'Not Provided',
             duration: data.duration || 'Not Provided',
             timeLength: data.time || 'Not Provided',
