@@ -68,7 +68,7 @@ module.exports = function (app, stormpath) {
 
                     var textString = 'You have signed up for the ' + study.studyName + " study. The study begins " + study.startDate + " and finishes " + study.endDate + ". The topic is focused on: " + study.summaryDescription + ". You will be compensated " + study.compensation + " for the completion of this study."
 
-                    mailjet.sendContent('mohamedmoussa97@gmail.com', 'mohamedmoussa97@gmail.com', 'StudyStarter Update', 'text', textString);
+                    mailjet.sendContent('mohamedmoussa97@gmail.com', 'b2caldwell@uw.ca', 'StudyStarter Update', 'text', textString);
 
                 })
             }
