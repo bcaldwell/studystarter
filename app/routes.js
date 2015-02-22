@@ -19,32 +19,19 @@ module.exports = function (app) {
         console.log("get");
         
         if(req.query){
-            
-            
+                 
             if (req.query.rank){
                 console.log("They are asking for rank");
                 console.log(req.query.rank);
-                Todo.find({},function(err,docs){
-                    var toReturn = []
-                    //if (typeof docs != 'array'){
-                    //    console.log("Doc was an object. should be length of 1")
-                    //    docs = [docs];
-                    //}
-                    console.log(req.query.rank);
-                    for (var i =0; i < docs.length && i < req.query.rank; i++){
-                        console.log(docs[i])
-                        toReturn.push(docs[i])
-                    }
-                    console.log(toReturn)
-                    res.json(toReturn)
-                    //console.log(docs)   
+                
+                Todo.find({}).sort({rank:-1}).limit(req.query.rank).
+                exec(function(err,docs){
+
+                    res.json(docs)
                 });
                 
-                //console.log(toReturn);
             }
-            //console.log("There are params");
-            
-            //console.log(Todo.find());
+
         }
 
         // use mongoose to get all todos in the database
@@ -76,7 +63,7 @@ module.exports = function (app) {
             email: data.email || 'Not Provided',
             duration: data.duration || 'Not Provided',
             timeLength: data.time || 'Not Provided',
-            rank: Math.ceil((Math.random() * 10)),
+            rank: Math.ceil((Math.random() * 40)),
             researcher:data.researcher || "Not Provided",
 
             //text: req.body.text,
