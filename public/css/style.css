@@ -71,6 +71,10 @@ h1.main-title {
     margin-bottom: 30px;
 }
 
+div.sponsored-studies {
+    margin-top: 50px;
+}
+
 div a.study-link {
 	text-decoration: none;
 }

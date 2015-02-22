@@ -19,14 +19,16 @@
     </div>
 </form>
 
-<div ng-repeat="Cstudy in study.studies" class="col-md-4">
-    <a ng-href="#/study/{{Cstudy._id}}" class="study-link">
-        <div class="sponsored-study">
-            <div class="study-info">
-                <h3>{{Cstudy.studyName}} <span class="rank pull-right">{{Cstudy.rank}}</span></h3>
-                <h5>{{Cstudy.researcher}}</h5>
+<div class="sponsored-studies">
+    <div ng-repeat="Cstudy in study.studies" class="col-md-4">
+        <a ng-href="#/study/{{Cstudy._id}}" class="study-link">
+            <div class="sponsored-study">
+                <div class="study-info">
+                    <h3>{{Cstudy.studyName}}</h3>
+                    <h5>{{Cstudy.researcher}}</h5>
+                </div>
+                <p>{{Cstudy.summaryDescription}}</p>
             </div>
-            <p>{{Cstudy.summaryDescription}}</p>
-        </div>
-    </a>
+        </a>
+    </div>
 </div>
