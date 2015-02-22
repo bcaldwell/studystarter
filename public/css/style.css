@@ -139,3 +139,8 @@ footer.footer p.footer-text {
     margin-top: 10px;
     color: white;
 }
+
+img.magnifier-img {
+	height: 35px;
+	width: 35px;
+}
