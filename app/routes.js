@@ -69,6 +69,7 @@ module.exports = function (app) {
             duration: data.duration || 'Not Provided',
             timeLength: data.time || 'Not Provided',
             rank: Math.ceil((Math.random() * 10)),
+            researcher:data.researcher || "Not Provided",
 
             //text: req.body.text,
             //description: "One small step",

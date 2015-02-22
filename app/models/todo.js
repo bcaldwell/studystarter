@@ -17,6 +17,7 @@ module.exports = mongoose.model('Studies', {
     timeLength:{type : String,  default: 'Not Provided'},
     rank:{type:String, defaults:"Not Provided"},
     areaOfInterest:{type:String, defaults:"Not Provided"},
-    typeOfStudy:{type:String,defaults:"Not Provided"}
+    typeOfStudy:{type:String,defaults:"Not Provided"},
+    researcher:{type:String,defaults:"Not Provided"}
 
 });
