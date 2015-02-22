@@ -72,7 +72,7 @@ module.exports = function (app, stormpath) {
 "Area of interest: " + study.areaOfInterest + "\n\n" +                    
 "You will be compensated " + study.compensation + " for the completion of this study."
 
-                    mailjet.sendContent('mohamedmoussa97@gmail.com', 'b2caldwell@uwaterloo.ca', 'StudyStarter Update', 'text', textString);
+                    mailjet.sendContent('mohamedmoussa97@gmail.com', 'b2caldwe@uwaterloo.ca', 'StudyStarter Update', 'text', textString);
 
                 })
             }
