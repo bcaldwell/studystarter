@@ -1,4 +1,18 @@
 <h1 class="main-title">Studies</h1>
+
+<div ng-repeat="study in home.studies" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <a ng-href="#/study/{{study._id}}" class="study-link">
+        <div class="sponsored-study">
+            <div class="study-info">
+                <h3>{{study.studyName}} <span class="rank pull-right">{{study.rank}}</span></h3>
+                <h5>{{study.researcher}}</h5>
+            </div>
+            <p>{{study.summaryDescription}}</p>
+        </div>
+    </a>
+</div>
+
+<!--
 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
     <a href="#/study/1" class="study-link">
         <div class="sponsored-study">
@@ -46,6 +60,7 @@
     </a>
 </div>
 <div class="clearfix visible-lg-block"></div>
+-->
 
 <form class="form-inline">
     <div class="form-group" style="width: 100%; text-align:center">

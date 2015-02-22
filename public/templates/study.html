@@ -8,11 +8,12 @@
 			<div class="col-md-4">
 				<h4><i class="fa fa-list"></i> Details:</h4>
 				<ul>
-					<li><i class="fa fa-calendar"></i> Start date: {{study.data.startDate}}</li>
-					<li><i class="fa fa-calendar"></i> End date: {{study.data.endDate}}</li>
+					<li><i class="fa fa-calendar"></i> Start and end dates: {{study.data.startDate}} to {{study.data.endDate}}</li>
 					<li><i class="fa fa-calendar"></i> Duration: {{study.data.duration}} {{study.data.timeLength}}</li>
-					<li><i class="fa fa-calendar"></i> Duration: {{study.data.studyLength}}</li>
 					<li><i class="fa fa-money"></i> Compensation: {{study.data.compensation}}</li>
+					<li><i class="fa fa-map-marker"></i> Location: {{study.data.townCity}}</li>
+					<li><i class="fa fa-area-chart"></i> Type of study: {{study.data.typeOfStudy}}</li>
+					<li><i class="fa fa-area-chart"></i> Area of interest: {{study.data.areaOfInterest}}</li>
 				</ul>
 			</div>
 			<div class="col-md-4">
@@ -20,6 +21,7 @@
 				<ul>
 					<li><i class="fa fa-arrows-v"></i> Age: {{study.data.age}}</li>
 					<li><i class="fa fa-venus-mars"></i> Gender: {{study.data.sex}}</li>
+					<li><i class="fa fa-lock"></i> Other requirements: {{study.data.otherRequirements}}</li>
 				</ul>
 			</div>
 			<div class="col-md-4">
@@ -33,7 +35,7 @@
 	</div>
 	<div class="study-profile-description">
 		<h4><i class="fa fa-file-text"></i> Description of study:</h4>
-		<p>{{study.data.text}}</p>
+		<p><span class="filled-data">{{study.data.fullDescription}}</span></p>
 	</div>
 </div>
 
