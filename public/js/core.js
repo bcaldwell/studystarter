@@ -39,12 +39,30 @@
             });
     }]);
 
-    app.controller('studyContoller', ['Page', function (page) {
+    app.controller('studyContoller', ['$http', 'Todos', 'Page', function ($http, Todos, page) {
         page.setTitle('study');
+        this.form = {};
+        this.form.area = "studyName";
+        Todos.get("rank=1000")
+            .success(function (data) {
+                that.studies = data;
+            });
+        var that = this;
+        this.submit = function () {
+            console.log(that.form);
+            Todos.get("key=" + that.form.area + "&value=" + that.form.searchInput)
+                .success(function (data) {
+                    that.studies = data;
+                });
+        }
     }]);
 
     app.controller('contactContoller', ['Page', function (page) {
         page.setTitle('contact');
+    }]);
+
+    app.controller('loginContoller', ['Page', function (page) {
+        page.setTitle('NaN');
     }]);
 
     app.controller('studyViewContoller', ['$stateParams', 'Page', '$http', 'Todos', function ($stateParams, page, $http, Todos) {
@@ -85,7 +103,8 @@ function ($stateProvider, $urlRouterProvider) {
                 .state('studies', {
                     url: '/studies',
                     templateUrl: 'templates/studies.html',
-                    controller: 'studyContoller'
+                    controller: 'studyContoller',
+                    controllerAs: 'study'
                 });
 
             $stateProvider
@@ -108,6 +127,13 @@ function ($stateProvider, $urlRouterProvider) {
                     templateUrl: 'templates/study.html',
                     controller: 'studyViewContoller',
                     controllerAs: 'study'
+                })
+            $stateProvider
+                .state('login', {
+                    url: "/login",
+                    templateUrl: 'templates/login.html',
+                    controller: 'loginViewContoller',
+                    controllerAs: 'login'
                 })
 
             $urlRouterProvider.otherwise('home');
