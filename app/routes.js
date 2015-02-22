@@ -15,42 +15,35 @@ function getTodos(res) {
     });
 };
 
-module.exports = function (app, stormpath) {
+module.exports = function (app) {
 
     // api ---------------------------------------------------------------------
     // get all todos
-    app.get('/api/todos', stormpath.loginRequired, function (req, res) {
+    app.get('/api/todos', function (req, res) {
         console.log("get");
-
-        if (req.query.key && req.query.value) {
+        
+        if(req.query.key && req.query.value){
             console.log("Received a search query")
             var key = req.query.key;
             var value = req.query.value.trim();
             console.log(key);
             console.log(value);
             //Todo.find({key:value},function(err,docs){
-            Todo.find({}, function (err, docs) {
-                var toReturn = [];
+            Todo.find({},function(err,docs){
+                var toReturn=[];
                 //console.log(err);
-<<<<<<< Updated upstream
                //console.log(docs);
                 for (var i = 0; i < docs.length; i++){
                     if(docs[i][key].toLowerCase().indexOf(value.toLowerCase()) > -1){
-=======
-                //console.log(docs);
-                for (var i = 0; i < docs.length; i++) {
-                    if (docs[i][key].toLowerCase() == value.toLowerCase()) {
->>>>>>> Stashed changes
                         //console.log('reach for loop search')
                         toReturn.push(docs[i])
                     }
                 }
                 //console.log(toReturn)
                 res.json(toReturn);
-                //    res.json(docs);
+            //    res.json(docs);
             })
         }
-<<<<<<< Updated upstream
         
         if(req.query){
             
@@ -65,39 +58,28 @@ module.exports = function (app, stormpath) {
             
             if(req.query._id){
                 
-=======
-
-        if (req.query) {
-
-            if (req.query._id) {
-
->>>>>>> Stashed changes
                 console.log("asking for id")
-                Todo.find({
-                    _id: req.query._id
-                }, function (err, docs) {
+            Todo.find({_id:req.query._id},function(err,docs){
 
                     res.json(docs)
                 });
-
-
+                
+            
             }
-
-            if (req.query.rank) {
+                 
+            if (req.query.rank){
                 console.log("Asking for rank");
                 console.log(req.query.rank);
-
-                //                Todo.find({}, function(err,docs){
-                //                    res.json(docs)
-                //                })
-                Todo.find({}).sort({
-                    rank: -1
-                }).limit(req.query.rank).
-                exec(function (err, docs) {
+                
+//                Todo.find({}, function(err,docs){
+//                    res.json(docs)
+//                })
+                Todo.find({}).sort({rank:-1}).limit(req.query.rank).
+                exec(function(err,docs){
 
                     res.json(docs)
                 });
-
+                
             }
 
         }
@@ -107,13 +89,13 @@ module.exports = function (app, stormpath) {
     });
 
     // create todo and send back all todos after creation
-    app.post('/api/todos', stormpath.loginRequired, function (req, res) {
-
+    app.post('/api/todos', function (req, res) {
+        
         var data = req.body;
         console.log(data.startDate)
         console.log(data.endDate)
 
-
+        
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
 
@@ -125,12 +107,12 @@ module.exports = function (app, stormpath) {
             startDate: data.startDate || "Not Provided",
             endDate: data.endDate || "Not Provided",
             compensation: data.compensation || 'Not Provided',
-            phoneNumber: data.phoneNumber || 000 - 000 - 0000,
+            phoneNumber: data.phoneNumber || 000-000-0000,
             email: data.email || 'Not Provided',
             duration: data.duration || 'Not Provided',
             timeLength: data.time || 'Not Provided',
             rank: Math.ceil((Math.random() * 40)),
-            researcher: data.researcher || "Not Provided",
+            researcher:data.researcher || "Not Provided",
             location: data.townCity || "Not Provided",
             otherRequirements: data.otherRequirements || "Not Provided",
             typeOfStudy: data.typeOfStudy || "Not Provided",
@@ -159,5 +141,8 @@ module.exports = function (app, stormpath) {
         });
     });
 
-    // application ---------------------------------------------
+    // application -------------------------------------------------------------
+    app.get('/adsf', function (req, res) {
+        res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+    });
 };
