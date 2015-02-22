@@ -1,4 +1,8 @@
 var Todo = require('./models/todo');
+var Mailjet = require('mailjet-sendemail')
+var apiKey = '206d156c6e43b5fda63d89aa8316ef4e'
+var secretKey = 'a9e6f254fb3781ceec010affa6e63226'
+var mailjet = new Mailjet(apiKey, secretKey);
 
 function getTodos(res) {
     Todo.find(function (err, todos) {
@@ -42,6 +46,15 @@ module.exports = function (app) {
         }
         
         if(req.query){
+            
+            if(req.query.sendEmail){
+                console.log("EMAIL SHOULD BE SENT! ZOMG")
+                //var apiKey = '206d156c6e43b5fda63d89aa8316ef4e0'
+                //var secretKey = 'a9e6f254fb3781ceec010affa6e63226'
+                //var mailJetSender = new mailJet(apiKey,secretKey);
+            mailjet.sendContent('mohamedmoussa97@gmail.com','mohamedmoussa97@gmail.com','This is a test. Youd better pass!','text','yeah, it worked');
+            
+            }
             
             if(req.query._id){
                 
