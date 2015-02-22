@@ -36,6 +36,7 @@
         Todos.get("rank=6")
             .success(function (data) {
                 that.studies = data;
+                console.log(data);
             });
     }]);
 
