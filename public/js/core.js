@@ -32,12 +32,10 @@
 
     app.controller('homeContoller', ['$http', 'Todos', 'Page', function ($http, Todos, page) {
         page.setTitle('home');
-        Todos.get({
-                rank: 6
-            })
-            //        .success(function (data) {
-            //            console.log(data);
-            //        });
+        Todos.get("rank=6")
+                    .success(function (data) {
+                       console.log(data);
+                     });
     }]);
 
     app.controller('studyContoller', ['Page', function (page) {

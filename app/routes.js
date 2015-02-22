@@ -17,9 +17,30 @@ module.exports = function (app) {
     // get all todos
     app.get('/api/todos', function (req, res) {
         console.log("get");
+        
+        if(req.query){
+            
+            
+            if (req.query.rank){
+                console.log("They are asking for rank");
+                Todo.find({},function(err,docs){
+                    var toReturn = []
+                    for (var i =0; i < req.query.rank; i++){
+                        toReturn.push(docs[i])
+                    }
+                    res.json(toReturn)
+                    //console.log(docs)   
+                });
+                
+                //console.log(toReturn);
+            }
+            //console.log("There are params");
+            
+            //console.log(Todo.find());
+        }
 
         // use mongoose to get all todos in the database
-        getTodos(res);
+        //getTodos(res);
     });
 
     // create todo and send back all todos after creation

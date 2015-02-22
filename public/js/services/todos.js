@@ -6,7 +6,7 @@ angular.module('todoService', [])
     return {
         get: function (data) {
             if (data) {
-                return $http.get('/api/todos?' + JSON.stringify(data));
+                return $http.get('/api/todos?' +data);
             }
         },
         create: function (data) {
