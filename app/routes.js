@@ -18,6 +18,29 @@ module.exports = function (app) {
     app.get('/api/todos', function (req, res) {
         console.log("get");
         
+        if(req.query.key && req.query.value){
+            console.log("Received a search query")
+            var key = req.query.key;
+            var value = req.query.value
+            console.log(key);
+            console.log(value);
+            //Todo.find({key:value},function(err,docs){
+            Todo.find({},function(err,docs){
+                var toReturn=[];
+                //console.log(err);
+               //console.log(docs);
+                for (var i = 0; i < docs.length; i++){
+                    if(docs[i][key] == value){
+                        //console.log('reach for loop search')
+                        toReturn.push(docs[i])
+                    }
+                }
+                //console.log(toReturn)
+                res.json(toReturn);
+            //    res.json(docs);
+            })
+        }
+        
         if(req.query){
             
             if(req.query._id){
@@ -32,7 +55,7 @@ module.exports = function (app) {
             }
                  
             if (req.query.rank){
-                console.log("They are asking for rank");
+                console.log("Asking for rank");
                 console.log(req.query.rank);
                 
 //                Todo.find({}, function(err,docs){
