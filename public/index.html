@@ -30,7 +30,7 @@
 
 <body>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" ng-controller="navController as nav">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -43,10 +43,14 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a class="navbar-text" href="#/home">Home</a></li>
-                    <li><a class="navbar-text" href="#/studies">View studies</a></li>
-                    <li><a class="navbar-text" href="#/make_study">Make a study</a></li>
-                    <li><a class="navbar-text" href="#/contact">Contact</a></li>
+                    <li ng-class="nav.active('home')"><a class="navbar-text" href="#/home">Home</a>
+                    </li>
+                    <li ng-class="nav.active('study')"><a class="navbar-text" href="#/studies">View studies</a>
+                    </li>
+                    <li ng-class="nav.active('make')"><a class="navbar-text" href="#/make_study">Make a study</a>
+                    </li>
+                    <li ng-class="nav.active('contact')"><a class="navbar-text" href="#/contact">Contact</a>
+                    </li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
