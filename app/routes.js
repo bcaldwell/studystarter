@@ -34,9 +34,13 @@ module.exports = function (app) {
                 //console.log(err);
                //console.log(docs);
                 for (var i = 0; i < docs.length; i++){
-                    if(docs[i][key].toLowerCase().indexOf(value.toLowerCase()) > -1){
+                    if(key != 'compensation' && docs[i][key].toLowerCase().indexOf(value.toLowerCase()) > -1){
                         //console.log('reach for loop search')
                         toReturn.push(docs[i])
+                    }
+                    else if(key == 'compensation'){
+                        console.log("Compensation reached");
+                        // FINISH THIS LATER    
                     }
                 }
                 //console.log(toReturn)
@@ -49,16 +53,23 @@ module.exports = function (app) {
             
             if(req.query.sendEmail){
                 console.log("EMAIL SHOULD BE SENT! ZOMG")
-                //var apiKey = '206d156c6e43b5fda63d89aa8316ef4e0'
-                //var secretKey = 'a9e6f254fb3781ceec010affa6e63226'
-                //var mailJetSender = new mailJet(apiKey,secretKey);
-            mailjet.sendContent('mohamedmoussa97@gmail.com','mohamedmoussa97@gmail.com','This is a test. Youd better pass!','text','yeah, it worked');
-            
+                console.log(req.query._id);
+
+                Todo.find({_id:req.query._id}, function(err,docs){
+                               
+                   var study = docs[0]; 
+                    
+                    var textString = 'You have signed up for the ' + study.studyName + " study. The study begins " + study.startDate + " and finishes " + study.endDate + ". The topic is focussed on: " + study.summaryDescription + ". You will be compensated " + study.compensation +" for the completion of this study." 
+                    
+                    mailjet.sendContent('mohamedmoussa97@gmail.com','mohamedmoussa97@gmail.com','StudyStarter Update','text', textString);
+                
+                })
             }
             
             if(req.query._id){
                 
-                console.log("asking for id")
+                console.log("asking for id");
+                //var value =
             Todo.find({_id:req.query._id},function(err,docs){
 
                     res.json(docs)
