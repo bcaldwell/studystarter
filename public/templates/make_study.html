@@ -18,6 +18,31 @@
             <label for="Full">Full Description:</label>
             <input ng-model="form.fullDescription" class="form-control" id="Full">
         </div>
+        
+        <div class="form-group">
+            <label for="Duration">Type Of Study: </label>        
+            <label for="Units"></label>
+            <div class="btn-group" style="text-align: center; width: 100%;">
+                <label class="btn btn-default" ng-model="form.typeOfStudy" ng-model="radioModel" btn-radio="'Case-Control Studies'">Case-Control Studies</label>
+                <label class="btn btn-default" ng-model="form.typeOfStudy" ng-model="radioModel" btn-radio="'Cohort Studies'">Cohort Studies</label>
+                <label class="btn btn-default" ng-model="form.typeOfStudy" ng-model="radioModel" btn-radio="'Randomized Trials'">Randomized Trials</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="Duration">Area of Interest: </label>        
+            <label for="Units"></label>
+            <div class="btn-group" style="text-align: center; width: 100%;">
+                <label class="btn btn-default" ng-model="form.areaOfInterest" ng-model="radioModel" btn-radio="'Psychological'">Psychological</label>
+                <label class="btn btn-default" ng-model="form.areaOfInterest" ng-model="radioModel" btn-radio="'Child Development'">Child Development</label>
+                <label class="btn btn-default" ng-model="form.areaOfInterest" ng-model="radioModel" btn-radio="'Education'">Education</label>
+                <label class="btn btn-default" ng-model="form.areaOfInterest" ng-model="radioModel" btn-radio="'Medical'">Medical</label>
+                <label class="btn btn-default" ng-model="form.areaOfInterest" ng-model="radioModel" btn-radio="'Philosophy'">Philosophy</label>
+                <label class="btn btn-default" ng-model="form.areaOfInterest" ng-model="radioModel" btn-radio="'Engineering'">Engineering</label>
+            </div>
+            <label for="Duration">Other: </label>        
+            <input style="margin:5px" placeholder="If no areas match, enter a more appropriate category" ng-model="form.areaOfInterest" class="form-control" id="Duration">
+        </div>
 
         <h2 style="margin:5px">Eligibility:</h2>
 
