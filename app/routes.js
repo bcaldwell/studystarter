@@ -16,6 +16,7 @@ module.exports = function (app) {
     // api ---------------------------------------------------------------------
     // get all todos
     app.get('/api/todos', function (req, res) {
+        console.log("get");
 
         // use mongoose to get all todos in the database
         getTodos(res);
@@ -26,27 +27,27 @@ module.exports = function (app) {
 
         console.log("Hey " + req.body);
         console.log(req.body)
-        
+
         var data = req.body;
 
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
-            
-            text : data.text || "Not Provided",
-            studyName:data.studyName || "Not Provided",
-            sex:data.sex || "Not Provided",
-            age:data.age || "Not Provided",
-            summaryDescription:data.summaryDescription || "Not Provided",
-            fullDescription:data.fullDescription || "Not Provided",
-            statDate:data.startDate || "Not Provided",
-            endDate:data.endDate || "Not Provided",
-            studyLength:data.studyLength || 'Not Provided',
-            compensation:data.compensation || 'Not Provided',
-            phone:data.phone || 'Not Provided',
-            email:data.email || 'Not Provided',
-            duration:data.duration || 'Not Provided',
-            timeLength:data.time || 'Not Provided',
-            rank: Math.ceil((Math.random()*10)),
+
+            text: data.text || "Not Provided",
+            studyName: data.studyName || "Not Provided",
+            sex: data.sex || "Not Provided",
+            age: data.age || "Not Provided",
+            summaryDescription: data.summaryDescription || "Not Provided",
+            fullDescription: data.fullDescription || "Not Provided",
+            statDate: data.startDate || "Not Provided",
+            endDate: data.endDate || "Not Provided",
+            studyLength: data.studyLength || 'Not Provided',
+            compensation: data.compensation || 'Not Provided',
+            phone: data.phone || 'Not Provided',
+            email: data.email || 'Not Provided',
+            duration: data.duration || 'Not Provided',
+            timeLength: data.time || 'Not Provided',
+            rank: Math.ceil((Math.random() * 10)),
 
             //text: req.body.text,
             //description: "One small step",

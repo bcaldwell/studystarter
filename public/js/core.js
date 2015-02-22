@@ -22,16 +22,22 @@
                 // if successful creation, call our get function to get all the new todos
                 // clear the form so our user is ready to enter another
 
-            .success(function (data) {
-                console.log("send");
-                $scope.form = {}; // clear the form so our user is ready to enter another
-            });
+//            .success(function (data) {
+            //                console.log("send");
+            //                $scope.form = {}; // clear the form so our user is ready to enter another
+            //            });
             $scope.form = {};
         };
     }]);
 
-    app.controller('homeContoller', ['Page', function (page) {
+    app.controller('homeContoller', ['$http', 'Todos', 'Page', function ($http, Todos, page) {
         page.setTitle('home');
+        Todos.get({
+                rank: 6
+            })
+            //        .success(function (data) {
+            //            console.log(data);
+            //        });
     }]);
 
     app.controller('studyContoller', ['Page', function (page) {
