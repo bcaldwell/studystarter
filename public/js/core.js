@@ -14,18 +14,12 @@
         };
     });
 
-    app.controller('makeStudy', ['$scope', '$http', 'Todos', 'Page', function ($scope, $http, Todos, page) {
+    app.controller('makeStudy', ['$scope', '$http', 'Todos', 'Page', '$window', function ($scope, $http, Todos, page, $window) {
         page.setTitle('make');
         $scope.submit = function () {
             console.log($scope.form);
-            Todos.create($scope.form)
-                // if successful creation, call our get function to get all the new todos
-                // clear the form so our user is ready to enter another
-
-            //            .success(function (data) {
-            //                console.log("send");
-            //                $scope.form = {}; // clear the form so our user is ready to enter another
-            //            });
+            Todos.create($scope.form);
+            $window.location.href = "/";
             $scope.form = {};
         };
     }]);
@@ -49,7 +43,6 @@
             });
         var that = this;
         this.submit = function () {
-            console.log(that.form);
             Todos.get("key=" + that.form.area + "&value=" + that.form.searchInput)
                 .success(function (data) {
                     that.studies = data;
@@ -65,7 +58,7 @@
         page.setTitle('NaN');
     }]);
 
-    app.controller('studyViewContoller', ['$stateParams', 'Page', '$http', 'Todos', function ($stateParams, page, $http, Todos) {
+    app.controller('studyViewContoller', ['$stateParams', 'Page', '$http', 'Todos', '$window', function ($stateParams, page, $http, Todos, $window) {
         page.setTitle('NaN');
         this.id = $stateParams.studyId;
         var that = this;
@@ -77,6 +70,7 @@
         this.sendEmail = function () {
             console.log("tis be clicked");
             Todos.get("sendEmail=true&_id=" + this.id)
+            $window.location.href = "/";
         }
     }]);
 
