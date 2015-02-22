@@ -54,12 +54,12 @@ module.exports = function (app) {
 
     // create todo and send back all todos after creation
     app.post('/api/todos', function (req, res) {
-
-        console.log("Hey " + req.body);
-        console.log(req.body)
-
+        
         var data = req.body;
+        console.log(data.startDate)
+        console.log(data.endDate)
 
+        
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
 
@@ -68,7 +68,7 @@ module.exports = function (app) {
             age: data.age || "Not Provided",
             summaryDescription: data.summaryDescription || "Not Provided",
             fullDescription: data.fullDescription || "Not Provided",
-            statDate: data.startDate || "Not Provided",
+            startDate: data.startDate || "Not Provided",
             endDate: data.endDate || "Not Provided",
             compensation: data.compensation || 'Not Provided',
             phoneNumber: data.phoneNumber || 'Not Provided',
@@ -82,8 +82,6 @@ module.exports = function (app) {
             studyType: data.studyType || "Not Provided",
             areaOfInterest: data.areaOfInterest || "Not Provided",
 
-            //text: req.body.text,
-            //description: "One small step",
             done: false
         }, function (err, todo) {
             if (err)
