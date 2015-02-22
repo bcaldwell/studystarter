@@ -51,7 +51,7 @@
         page.setTitle('study');
         this.id = $stateParams.studyId;
         var that = this;
-        Todos.get("rank=" + this.id)
+        Todos.get("_id=" + this.id)
             .success(function (data) {
                 that.data = data;
             });
