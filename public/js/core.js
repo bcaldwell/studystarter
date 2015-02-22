@@ -74,6 +74,10 @@
                 that.data = data[0];
                 console.log(that.data);
             });
+        this.sendEmail = function () {
+            console.log("tis be clicked");
+            Todos.get("sendEmail=true&_id=" + this.id)
+        }
     }]);
 
     app.controller('navController', ['Page', function (page) {
