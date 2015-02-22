@@ -16,6 +16,11 @@ module.exports = function (app) {
     // api ---------------------------------------------------------------------
     // get all todos
     app.get('/api/todos', function (req, res) {
+        
+        //determine what they want to filter by:
+        // then use filter
+        // res.body
+        //Todo.find({key,value})
 
         // use mongoose to get all todos in the database
         getTodos(res);
@@ -46,6 +51,8 @@ module.exports = function (app) {
             email:data.email || 'Not Provided',
             duration:data.duration || 'Not Provided',
             timeLength:data.time || 'Not Provided',
+            areaOfInterest:data.areaOfInterest || 'Not Provided',
+            typeOfStudy:data.typeOfStudy || 'Not Provided',
             rank: Math.ceil((Math.random()*10)),
 
             //text: req.body.text,
