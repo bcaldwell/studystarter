@@ -8,17 +8,17 @@ html body {
     
     margin-bottom: 60px;
     margin-top: 90px;
-    background-color: #40C7FF;
+    background-color: #F2F2F2;
 }
 
 body nav.navbar-custom {
-    background-color: rgba(0, 160, 191, 0.95);
-    border: 1px solid #00BABF;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid black;
     height: 70px;
 }
 
 body nav.navbar-custom div.container div.name-text {
-    color: #CCB014;
+    color: #00B4FF;
     font-size: 40px;
     font-weight: bold;
     margin-top: 0px;
@@ -37,7 +37,7 @@ body nav.navbar-custom div.container li.active a {
 
 body nav.navbar-custom div.container a {
     color: white;
-    background-color: rgba(0, 160, 191, 0.95);
+    background-color: rgba(0, 0, 0, 0);
     font-size: 20px;
     margin-top: 20px;
     padding: 5px;
@@ -46,14 +46,12 @@ body nav.navbar-custom div.container a {
 
 body nav.navbar-custom div.container a:hover {
     color: #FFA500;
-    background-color: rgba(0, 160, 191, 0.95);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 h1.main-title {
-    color: #998B3D;
-    text-decoration: underline;
+    color: green;
     font-size: 42px;
-    text-shadow: 0px 0px 1px black;
     margin-bottom: 30px;
 }
 
@@ -68,7 +66,7 @@ div.sponsored-study {
 }
 
 div.sponsored-study:hover {
-    background-color: rgba(153, 139, 61, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     color: white;
     box-shadow: 5px 5px 10px black;
 }
@@ -78,7 +76,7 @@ div.sponsored-study:hover h3 {
 }
 
 div.sponsored-study:hover h5 {
-    color: gray;
+    color: #0386BF;
 }
 
 div.sponsored-study div.study-info {
@@ -119,7 +117,7 @@ footer.footer {
     /* Set the fixed height of the footer here */
     
     height: 40px;
-    background-color: #00A0BF;
+    background-color: #1C1C1C;
 }
 
 footer.footer p.footer-text {
