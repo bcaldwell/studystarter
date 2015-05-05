@@ -35,13 +35,14 @@ module.exports = function (app, stormpath) {
                 //console.log(docs);
                 for (var i = 0; i < docs.length; i++) {
 
-                    if (key != 'compensation' && docs[i][key].toLowerCase().indexOf(value.toLowerCase()) > -1) {
+                    if (key != 'compensation' && docs[i][key] && docs[i][key].toLowerCase().indexOf(value.toLowerCase()) > -1) {
                         //console.log('reach for loop search')
                         toReturn.push(docs[i])
                     } else if (key == 'compensation') {
                         console.log("Compensation reached");
-                        if (docs[i][key] > value) {
+                        if (docs[i][key].replace(/\D/g,'') > value) {
                             console.log("Adding to compensation")
+                            console.log()
                             toReturn.push(docs[i]);
 
                         }
