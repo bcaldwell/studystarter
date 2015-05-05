@@ -7,7 +7,6 @@ var database = require('./config/database'); // load the database config
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-var stormpath = require('express-stormpath');
 
 // configuration ===============================================================
 mongoose.connect(database.url); // connect to mongoDB database on modulus.io
@@ -22,21 +21,10 @@ app.use(bodyParser.json({
     type: 'application/vnd.api+json'
 })); // parse application/vnd.api+json as json
 app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request
-app.use(stormpath.init(app, {
-    apiKeyFile: './apiKey.properties',
-    application: 'https://api.stormpath.com/v1/applications/5BcTyOoCBjzpR7pPRwBxXm',
-    secretKey: 'some_long_random_string',
 
-    enableUsername: true,
-    requireUsername: true,
-    enableForgotPassword: true,
-
-
-    redirectUrl: '/'
-}));
 
 // routes ======================================================================
-require('./app/routes.js')(app, stormpath);
+require('./app/routes.js')(app);
 
 // listen (start app with node server.js) ======================================
 app.listen(port);

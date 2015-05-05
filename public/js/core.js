@@ -47,7 +47,7 @@
                 .success(function (data) {
                     that.studies = data;
                 });
-        }
+        };
     }]);
 
     app.controller('contactContoller', ['Page', function (page) {
@@ -125,7 +125,7 @@ function ($stateProvider, $urlRouterProvider) {
                     templateUrl: 'templates/study.html',
                     controller: 'studyViewContoller',
                     controllerAs: 'study'
-                })
+                });
             $stateProvider
                 .state('login', {
                     url: "/login",
