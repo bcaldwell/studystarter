@@ -40,7 +40,7 @@ module.exports = function (app) {
                         toReturn.push(docs[i])
                     } else if (key == 'compensation') {
                         console.log("Compensation reached");
-                        if (docs[i][key].replace(/\D/g,'') > value) {
+                        if (docs[i][key].replace(/\D/g, '') > value) {
                             console.log("Adding to compensation")
                             console.log()
                             toReturn.push(docs[i]);
@@ -68,12 +68,12 @@ module.exports = function (app) {
                     var study = docs[0];
 
                     var textString = "Thank you for signing up to participate in the study entitled " + study.studyName + " study. The study begins on " + study.startDate + " and finishes on " + study.endDate + ".\n\n" +
-"Location: " + study.location + "\n" +
-"Type of study: " + study.typeOfStudy + "\n" +
-"Area of interest: " + study.areaOfInterest + "\n\n" +
-"You will be compensated " + study.compensation + " for the completion of this study."
+                        "Location: " + study.location + "\n" +
+                        "Type of study: " + study.typeOfStudy + "\n" +
+                        "Area of interest: " + study.areaOfInterest + "\n\n" +
+                        "You will be compensated " + study.compensation + " for the completion of this study."
 
-                    mailjet.sendContent('mohamedmoussa97@gmail.com', 'b2caldwe@uwaterloo.ca', 'StudyStarter Update', 'text', textString);
+                    //                    mailjet.sendContent('mohamedmoussa97@gmail.com', 'b2caldwe@uwaterloo.ca', 'StudyStarter Update', 'text', textString);
 
                 })
             }
