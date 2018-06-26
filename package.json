@@ -6,7 +6,7 @@
     "author": "Scotch",
     "dependencies": {
         "body-parser": "~1.4.3",
-        "express": "~4.6.1",
+        "express": "~4.16.0",
         "mailjet-sendemail": "^1.1.4",
         "method-override": "~2.1.1",
         "mongoose": "~3.8.13",
