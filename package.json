@@ -10,6 +10,6 @@
         "mailjet-sendemail": "^1.1.4",
         "method-override": "~2.1.1",
         "mongoose": "~3.8.13",
-        "morgan": "~1.1.1"
+        "morgan": "~1.9.1"
     }
 }
